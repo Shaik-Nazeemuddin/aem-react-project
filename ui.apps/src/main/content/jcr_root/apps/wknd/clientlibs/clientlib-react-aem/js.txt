@@ -1,0 +1,3 @@
+#base=js
+
+react-aem.js
