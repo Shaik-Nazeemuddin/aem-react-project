@@ -1,6 +1,5 @@
 const modules = {
   HomepageModules: require("./HomepageModules"),
-  //Checkout: require("./Checkout"),
 };
 
 module.exports = {
