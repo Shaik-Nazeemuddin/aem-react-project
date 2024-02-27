@@ -1,8 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import Module from './modules';
+import './App.scss';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <App/>
-);
+(function() {
+    try {
+        if( document.readyState === 'complete') {
+            Module.init();
+        } else { 
+            window.addEventListener('load', ()=> Module.init());
+        }
+    } catch(e) {
+        console.error('error in the page init', e);
+    }
+})();
+
